@@ -1,5 +1,8 @@
 import streamlit as st
 
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4563574275594853"
+     crossorigin="anonymous"></script>
+
 def calculate_bmi(height, weight):
   """Calculates the BMI given the height and weight in meters and kilograms."""
   bmi = weight / height ** 2
