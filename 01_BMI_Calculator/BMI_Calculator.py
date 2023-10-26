@@ -1,9 +1,19 @@
 import streamlit as st
+from flask import Flask
 
-html_content = """
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4563574275594853"
+app = Flask(__name)
+
+@app.route('/')
+def hello_world():
+    # Define the HTML content as a string
+    html_content = """
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4563574275594853"
      crossorigin="anonymous"></script>
     """
+    return html_content
+
+if __name__ == '__main__':
+    app.run()
 
 def calculate_bmi(height, weight):
   """Calculates the BMI given the height and weight in meters and kilograms."""
